@@ -201,7 +201,7 @@ function iniciarJuego(){
 }
 
 function unirseAlJuego() {
-    fetch("http://192.168.1.8:8080/unirse")
+    fetch("https://a4ronr1.github.io/chupetonasgame/unirse")
     .then(function (res) {
         if (res.ok) {
             res.text()
@@ -249,7 +249,7 @@ function SelectPetPlayer(){
 }
 
 function seleccionarChupetona(mascotaJugador) {
-    fetch(`http://192.168.1.8:8080/chupetona/${playerid}`, {
+    fetch(`https://a4ronr1.github.io/chupetonasgame/chupetona/${playerid}`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -313,7 +313,7 @@ function secuenciaAtaque() {
 }
 
 function enviarAtaques() {
-    fetch(`http://192.168.1.8:8080/chupetona/${playerid}/ataques`, {
+    fetch(`https://a4ronr1.github.io/chupetonasgame/chupetona/${playerid}/ataques`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -326,7 +326,7 @@ function enviarAtaques() {
 }
 
 function obtenerAtaques() {
-    fetch(`http://192.168.1.8:8080/chupetona/${enemigoid}/ataques`)
+    fetch(`https://a4ronr1.github.io/chupetonasgame/chupetona/${enemigoid}/ataques`)
     .then(function (res) {
         if (res.ok) {
             res.json()
@@ -463,7 +463,7 @@ function pintarCanvas() {
 }
 
 function enviarPosicion(x, y) {
-    fetch(`http://192.168.1.8:8080/chupetona/${playerid}/posicion`, {
+    fetch(`https://a4ronr1.github.io/chupetonasgame/chupetona/${playerid}/posicion`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -611,7 +611,7 @@ function revisarColision(enemigo) {
 }
 
 function limpiarJuego() {
-    fetch(`http://192.168.1.8:8080/chupetona/${playerid}/clear`)
+    fetch(`https://a4ronr1.github.io/chupetonasgame/chupetona/${playerid}/clear`)
     .then( (res) => {
         if(res.ok){
             res.text()
