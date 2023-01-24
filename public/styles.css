@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Press+Start+2P&display=swap');
+:root {
+
+	font-family: 'Press Start 2P', cursive;
+	--White:  rgba(228,238,249,.5);
+	--border-blur: solid 4pxrgba(255,255,255,.5);
+	--box-shadow: 020px30px4pxrgba(0,0,0,.2);
+	--text: #F1EDED;
+
+}
+
+body{
+    background-repeat: no-repeat;
+    background-image: linear-gradient(0deg,
+    rgba(107, 107, 107, 0.336),
+    rgba(107, 107, 107, 0.336)), url(../imagenes/pxArt.png);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    user-select: none;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    color: #fff;
+
+}
+
+.subtitle{
+    color: #fff;
+    font-size: 22px;
+}
+
+#select-pet{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-pet{
+    width: 208px;
+    height: 187px;
+    background: rgba(252, 249, 190, 0.79);
+    padding: 12px;
+    box-sizing: border-box;
+    margin: 4px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    box-shadow: 10px 5px 5px rgb(0 0 0 / 39%);
+    transition: all 0.2s;
+}
+
+.box-pet:hover {
+    transform: scale(1.03) translateY(-5px);
+    color: rgba(255, 255, 255, 0.822);
+}
+
+.box-pet img{
+    background-color: var(--White);
+    backdrop-filter: blur(70px);
+    border: var(--border-blur);
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+    height: 98px;
+    width: 103px;
+    margin-top: -56px;
+}
+
+#boton-select{
+	font-family: 'Press Start 2P', cursive;
+    height: 45px;
+    width: 255px;
+    font-size: 20px;
+    padding: 8px;
+    margin: 30px;
+    background-color: #f8c271;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.342);
+    transition: all 0.2s;
+}
+
+#boton-select:hover{
+    background-color: #c5944a;
+    color: rgb(219, 219, 219);
+    transform: scale(1.0) translateY(-5px);
+}
+
+.tarjetas{
+    display: flex;
+    gap: 1px;
+}
+.box-pet:hover{
+    cursor: pointer;
+}
+
+
+input{
+    display: none;
+}
+
+input:checked + label{
+    border-radius: 30%;
+    color: #FBFEFF;
+    background-color: #b8e8fc8f;
+}
+
+#select-attack{
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-ataques{
+    border: none;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.274);
+    border-radius: 6px;
+    background-color: #faac78c2;
+    color: rgba(255, 255, 255, 0.822);
+    height: 40px;
+    width: 158px;
+    padding: 10px;
+    font-family: 'Press Start 2P', cursive;;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.342);
+}
+
+.btn-ataques:hover {
+    transform: scale(1.0) translateY(-3px);
+    transition: all 0.3s;
+    cursor: pointer
+}
+
+#mensajes{
+    width: 378px;
+    background-color: #faac789c;
+    padding: 25px;
+    margin: 22px;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.342);
+}
+
+#boton-reiniciar{
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #faab34;
+    width: 266px;
+    height: 33px;
+    border-radius: 20px;
+    color: rgb(32, 32, 32);
+}
+
+#boton-reiniciar:hover {
+    background-color: rgb(252, 168, 44);
+    color: rgb(238, 236, 236);
+    transition: all 0.2s;
+}
+
+.container-vidas {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    gap: 10rem;
+	padding: 2rem;
+    position: relative;
+}
+
+.tarjetavida {
+
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(250,253,235,.8);
+    backdrop-filter: blur(70px);
+    border: var(--border-blur);
+    box-shadow: var(--box-shadow);
+    border-radius: 16px;
+    padding: 2rem;
+    width: 18rem;
+    height: 29rem;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.342);
+}
+#vidas-jugador, #vidas-enemigo {
+	color: #EBA055;
+    font-size: 3rem;
+    justify-content: center;
+    display: flex;
+}
+#mascota-jugador, #mascota-enemigo{
+    color: #D8934F;
+	font-size: 1.2rem;
+}
+
+#ataques-enemigo, #ataques-jugador {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 15px;
+}
+
+.tarjetas-ataques {
+    display: flex;
+    gap: 20px;
+}
+
+#ver-mapa {
+    font-size: 15px;
+    color: #fff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ver-mapa button {
+    font-family: 'Press Start 2P', cursive;
+    height: 40px;
+    width: 147px;
+    font-size: 15px;
+    padding: 5px;
+    margin: 10px;
+    background-color: #f8c271;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    font-weight: bold;
+    box-shadow: 10px 5px 5px rgb(0 0 0 / 34%);
+    transition: all 0.2s;
+}
+
+#ver-mapa button:hover { 
+    background-color: #c5944a;
+    color: rgb(219, 219, 219);
+    transform: scale(0.9) translateY(2px);
+}
+
+#mapa {
+    border: 2px solid white;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 9px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #8e9ba4;
+    border-radius: 3px;
+  }
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #4b718b;
+    border-radius: 30px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8e9ba4;
+    box-shadow: 0 0 2px 1px rgba(51, 51, 51, 0.2);
+}
+
+@media (max-width: 750px) {
+    .tarjetas, .tarjetas-ataques {
+        flex-direction: column;
+    }
+    .title {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .subtitle {
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 700px) {
+    #ver-mapa div {
+        display: flex;
+        align-items: center;
+        height: 10px;
+        padding: 5px;
+        margin: 5px;
+        font-size: 5px;
+        user-select: none;
+    }
+}
