@@ -13,7 +13,7 @@ body{
     background-repeat: no-repeat;
     background-image: linear-gradient(0deg,
     rgba(107, 107, 107, 0.336),
-    rgba(107, 107, 107, 0.336)), url(../imagenes/pxArt.png);
+    rgba(107, 107, 107, 0.336)), url(./imagenes/pxArt.png);
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
