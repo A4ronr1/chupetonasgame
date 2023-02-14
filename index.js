@@ -97,6 +97,6 @@ app.get("/chupetona/:playerid/clear", (req, res) => {
     res.send(playerid)
 })
 
-app.listen(8080, () => {
+app.listen(process.env.PORT || 8080, () => {
     console.log("Servidor funcionando")
 })
